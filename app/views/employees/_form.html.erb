@@ -1,0 +1,107 @@
+<%= form_with(model: employee, local: true) do |form| %>
+  <% if employee.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(employee.errors.count, "error") %> prohibited this employee from being saved:</h2>
+
+      <ul>
+      <% employee.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title, id: :employee_title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :empid %>
+    <%= form.number_field :empid, id: :employee_empid %>
+  </div>
+
+  <div class="field">
+    <%= form.label :firstname %>
+    <%= form.text_field :firstname, id: :employee_firstname %>
+  </div>
+
+  <div class="field">
+    <%= form.label :midname %>
+    <%= form.text_field :midname, id: :employee_midname %>
+  </div>
+
+  <div class="field">
+    <%= form.label :lastname %>
+    <%= form.text_field :lastname, id: :employee_lastname %>
+  </div>
+
+  <div class="field">
+    <%= form.label :bloodtype %>
+    <%= form.text_field :bloodtype, id: :employee_bloodtype %>
+  </div>
+
+  <div class="field">
+    <%= form.label :nationality %>
+    <%= form.text_field :nationality, id: :employee_nationality %>
+  </div>
+
+  <div class="field">
+    <%= form.label :address %>
+    <%= form.text_field :address, id: :employee_address %>
+  </div>
+
+  <div class="field">
+    <%= form.label :city %>
+    <%= form.text_field :city, id: :employee_city %>
+  </div>
+
+  <div class="field">
+    <%= form.label :state %>
+    <%= form.text_field :state, id: :employee_state %>
+  </div>
+
+  <div class="field">
+    <%= form.label :pin %>
+    <%= form.text_field :pin, id: :employee_pin %>
+  </div>
+
+  <div class="field">
+    <%= form.label :homenumber %>
+    <%= form.number_field :homenumber, id: :employee_homenumber %>
+  </div>
+
+  <div class="field">
+    <%= form.label :mobile %>
+    <%= form.text_field :mobile, id: :employee_mobile %>
+  </div>
+
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.text_field :email, id: :employee_email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :joined_at %>
+    <%= form.date_select :joined_at, id: :employee_joined_at %>
+  </div>
+
+  <div class="field">
+    <%= form.label :birth_date %>
+    <%= form.date_select :birth_date, id: :employee_birth_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :gender %>
+    <%= form.text_field :gender, id: :employee_gender %>
+  </div>
+
+  <div class="field">
+    <%= form.label :marital %>
+    <%= form.text_field :marital, id: :employee_marital %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

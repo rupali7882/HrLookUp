@@ -1,0 +1,41 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  empid: 1
+  firstname: MyString
+  midname: MyString
+  lastname: MyString
+  bloodtype: MyString
+  nationality: MyString
+  address: MyString
+  city: MyString
+  state: MyString
+  pin: MyString
+  homenumber: 1
+  mobile: 
+  email: MyString
+  joined_at: 2017-10-02
+  birth_date: 2017-10-02
+  gender: MyString
+  marital: MyString
+
+two:
+  title: MyString
+  empid: 1
+  firstname: MyString
+  midname: MyString
+  lastname: MyString
+  bloodtype: MyString
+  nationality: MyString
+  address: MyString
+  city: MyString
+  state: MyString
+  pin: MyString
+  homenumber: 1
+  mobile: 
+  email: MyString
+  joined_at: 2017-10-02
+  birth_date: 2017-10-02
+  gender: MyString
+  marital: MyString
