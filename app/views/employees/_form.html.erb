@@ -11,95 +11,141 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title, id: :employee_title %>
-  </div>
+  <table>
+    <tr>
+      <td class="col-md-3">
+      <%= form.label :title %>
+    </td>
+    <td class="col-md-3">
+      <%= form.text_field :title, id: :employee_title %>
+    </td>
+    <td class="col-md-3">
+      <%= form.label :empid %>
+    </td>
+    <td class="col-md-3">
+      <%= form.number_field :empid, id: :employee_empid %>
+    </td>
+  </tr>
 
-  <div class="field">
-    <%= form.label :empid %>
-    <%= form.number_field :empid, id: :employee_empid %>
-  </div>
+  <tr>
+    <td class="col-md-3">
+      <%= form.label :firstname %>
+    </td>
+    <td class="col-md-3">
+      <%= form.text_field :firstname, id: :employee_firstname %>
+    </td>
+    <td class="col-md-3">
+      <%= form.label :midname %>
+    </td>
+    <td class="col-md-3">
+      <%= form.text_field :midname, id: :employee_midname %>
+    </td>
+  </tr>
 
-  <div class="field">
-    <%= form.label :firstname %>
-    <%= form.text_field :firstname, id: :employee_firstname %>
-  </div>
+  <tr>
+    <td class="col-md-3">
+      <%= form.label :lastname %>
+    </td>
+    <td class="col-md-3">
+      <%= form.text_field :lastname, id: :employee_lastname %>
+    </td>
+    <td class="col-md-3">
+      <%= form.label :bloodtype %>
+    </td>
+    <td class="col-md-3">
+      <%= form.text_field :bloodtype, id: :employee_bloodtype %>
+    </td>
+  </tr>
 
-  <div class="field">
-    <%= form.label :midname %>
-    <%= form.text_field :midname, id: :employee_midname %>
-  </div>
+  <tr>
+    <td class="col-md-3">
+      <%= form.label :nationality %>
+    </td>
+    <td class="col-md-3">
+      <%= form.text_field :nationality, id: :employee_nationality %>
+    </td>
+    <td class="col-md-3">
+      <%= form.label :address %>
+    </td>
+    <td class="col-md-3">
+      <%= form.text_field :address, id: :employee_address %>
+    </td>
+  </tr>
 
-  <div class="field">
-    <%= form.label :lastname %>
-    <%= form.text_field :lastname, id: :employee_lastname %>
-  </div>
+  <tr>
+    <td class="col-md-3">
+      <%= form.label :city %>
+    </td>
+    <td class="col-md-3">
+      <%= form.text_field :city, id: :employee_city %>
+    </td>
+    <td class="col-md-3">
+      <%= form.label :state %>
+    </td>
+    <td class="col-md-3">
+      <%= form.text_field :state, id: :employee_state %>
+    </td>
+  </tr>
 
-  <div class="field">
-    <%= form.label :bloodtype %>
-    <%= form.text_field :bloodtype, id: :employee_bloodtype %>
-  </div>
+  <tr>
+    <td class="col-md-3">
+      <%= form.label :pin %>
+    </td>
+    <td class="col-md-3">
+      <%= form.text_field :pin, id: :employee_pin %>
+    </td>
+    <td class="col-md-3">
+      <%= form.label :homenumber %>
+    </td>
+    <td class="col-md-3">
+      <%= form.number_field :homenumber, id: :employee_homenumber %>
+    </td>
+  </tr>
 
-  <div class="field">
-    <%= form.label :nationality %>
-    <%= form.text_field :nationality, id: :employee_nationality %>
-  </div>
+  <tr>
+    <td class="col-md-3">
+      <%= form.label :mobile %>
+    </td>
+    <td class="col-md-3">
+      <%= form.text_field :mobile, id: :employee_mobile %>
+    </td>
+    <td class="col-md-3">
+      <%= form.label :email %>
+    </td>
+    <td class="col-md-3">
+      <%= form.text_field :email, id: :employee_email %>
+    </td>
+  </tr>
 
-  <div class="field">
-    <%= form.label :address %>
-    <%= form.text_field :address, id: :employee_address %>
-  </div>
+  <tr>
+    <td class="col-md-3">
+      <%= form.label :joined_at %>
+    </td>
+    <td class="col-md-3">
+      <%= form.date_select :joined_at, id: :employee_joined_at %>
+    </td>
+    <td class="col-md-3">
+      <%= form.label :birth_date %>
+    </td>
+    <td class="col-md-3">
+      <%= form.date_select :birth_date, id: :employee_birth_date %>
+    </td>
+  </tr>
 
-  <div class="field">
-    <%= form.label :city %>
-    <%= form.text_field :city, id: :employee_city %>
-  </div>
-
-  <div class="field">
-    <%= form.label :state %>
-    <%= form.text_field :state, id: :employee_state %>
-  </div>
-
-  <div class="field">
-    <%= form.label :pin %>
-    <%= form.text_field :pin, id: :employee_pin %>
-  </div>
-
-  <div class="field">
-    <%= form.label :homenumber %>
-    <%= form.number_field :homenumber, id: :employee_homenumber %>
-  </div>
-
-  <div class="field">
-    <%= form.label :mobile %>
-    <%= form.text_field :mobile, id: :employee_mobile %>
-  </div>
-
-  <div class="field">
-    <%= form.label :email %>
-    <%= form.text_field :email, id: :employee_email %>
-  </div>
-
-  <div class="field">
-    <%= form.label :joined_at %>
-    <%= form.date_select :joined_at, id: :employee_joined_at %>
-  </div>
-
-  <div class="field">
-    <%= form.label :birth_date %>
-    <%= form.date_select :birth_date, id: :employee_birth_date %>
-  </div>
-
-  <div class="field">
-    <%= form.label :gender %>
-    <%= form.text_field :gender, id: :employee_gender %>
-  </div>
-
-  <div class="field">
-    <%= form.label :marital %>
-    <%= form.text_field :marital, id: :employee_marital %>
-  </div>
+  <tr>
+    <td class="col-md-3">
+      <%= form.label :gender %>
+    </td>
+    <td class="col-md-3">
+      <%= form.text_field :gender, id: :employee_gender %>
+    </td>
+    <td class="col-md-3">
+      <%= form.label :marital %>
+    </td>
+    <td class="col-md-3">
+      <%= form.text_field :marital, id: :employee_marital %>
+    </td>
+  </tr>
 
   <div class="actions">
     <%= form.submit %>
