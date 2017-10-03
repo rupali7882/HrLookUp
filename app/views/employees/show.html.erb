@@ -1,94 +1,137 @@
 <p id="notice"><%= notice %></p>
+<div class="text-center">
+<h2>Welcome to Employee Details</h2>
+</div>
+<div class="heading">Personal Information</div>
+<table>
+  <tr>
+    <td class="col-md-3">
+      <strong>Title:</strong>
+    </td>
+    <td class="col-md-3">
+      <%= @employee.title %>
+    </td>
+    <td class="col-md-3">
+      <strong>Empid:</strong>
+    </td>
+    <td class="col-md-3">
+      <%= @employee.empid %>
+    </td>
+  </tr>
 
-<p>
-  <strong>Title:</strong>
-  <%= @employee.title %>
-</p>
+  <tr>
+    <td class="col-md-3">
+      <strong>Firstname:</strong>
+    </td>
+    <td class="col-md-3">
+      <%= @employee.firstname %>
+    </td>
+    <td class="col-md-3">
+      <strong>Midname:</strong>
+    </td>
+    <td class="col-md-3">
+      <%= @employee.midname %>
+    </td>
+  </tr>
+  <tr>
+    <td class="col-md-3">
+      <strong>Lastname:</strong>
+    </td>
+    <td class="col-md-3">
+      <%= @employee.lastname %>
+    </td>
+    <td class="col-md-3">
+      <strong>Bloodtype:</strong>
+    </td>
+    <td class="col-md-3">
+      <%= @employee.bloodtype %>
+    </td>
+  </tr>
+  <tr>
+    <td class="col-md-3">
+      <strong>Nationality:</strong>
+    </td>
+    <td class="col-md-3">
+      <%= @employee.nationality %>
+    </td>
+    <td class="col-md-3">
+      <strong>City:</strong>
+    </td>
+    <td class="col-md-3">
+      <%= @employee.city %>
+    </td>
+  </tr>
+  <tr>
+    <td class="col-md-3">
+      <strong>State:</strong>
+    </td>
+    <td class="col-md-3">
+      <%= @employee.state %>
+    </td>
+    <td class="col-md-3">
+      <strong>Pin:</strong>
+    </td>
+    <td class="col-md-3">
+      <%= @employee.pin %>
+    </td>
+  </tr>
+  <tr>
+    <td class="col-md-3">
+      <strong>Homenumber:</strong>
+    </td>
+    <td class="col-md-3">
+      <%= @employee.homenumber %>
+    </td>
+    <td class="col-md-3">
+      <strong>Mobile:</strong>
+    </td>
+    <td class="col-md-3">
+      <%= @employee.mobile %>
+    </td>
+  </tr>
+  <tr>
+    <td class="col-md-3">
+      <strong>Email:</strong>
+    </td>
+    <td class="col-md-3">
+      <%= @employee.email %>
+    </td>
+    <td class="col-md-3">
+      <strong>Joined at:</strong>
+    </td>
+    <td class="col-md-3">
+      <%= @employee.joined_at %>
+    </td>
+  </tr>
+  <tr>
+    <td class="col-md-3">
+      <strong>Birth date:</strong>
+    </td>
+    <td class="col-md-3">
+      <%= @employee.birth_date %>
+    </td>
+    <td class="col-md-3">
+      <strong>Gender:</strong>
+    </td>
+    <td class="col-md-3">
+      <%= @employee.gender %>
+    </td>
+  </tr>
+  <tr>
+    <td class="col-md-3">
+      <strong>Marital:</strong>
+    </td>
+    <td class="col-md-3">
+      <%= @employee.marital %>
+    </td>
+    <td>
 
-<p>
-  <strong>Empid:</strong>
-  <%= @employee.empid %>
-</p>
+    </td>
+    <td>
 
-<p>
-  <strong>Firstname:</strong>
-  <%= @employee.firstname %>
-</p>
-
-<p>
-  <strong>Midname:</strong>
-  <%= @employee.midname %>
-</p>
-
-<p>
-  <strong>Lastname:</strong>
-  <%= @employee.lastname %>
-</p>
-
-<p>
-  <strong>Bloodtype:</strong>
-  <%= @employee.bloodtype %>
-</p>
-
-<p>
-  <strong>Nationality:</strong>
-  <%= @employee.nationality %>
-</p>
-
-<p>
-  <strong>Address:</strong>
-  <%= @employee.address %>
-</p>
-
-<p>
-  <strong>City:</strong>
-  <%= @employee.city %>
-</p>
-
-<p>
-  <strong>State:</strong>
-  <%= @employee.state %>
-</p>
-
-<p>
-  <strong>Pin:</strong>
-  <%= @employee.pin %>
-</p>
-
-<p>
-  <strong>Homenumber:</strong>
-  <%= @employee.homenumber %>
-</p>
-
-<p>
-  <strong>Mobile:</strong>
-  <%= @employee.mobile %>
-</p>
-
-<p>
-  <strong>Email:</strong>
-  <%= @employee.email %>
-</p>
-
-<p>
-  <strong>Joined at:</strong>
-  <%= @employee.joined_at %>
-</p>
-
-<p>
-  <strong>Birth date:</strong>
-  <%= @employee.birth_date %>
-</p>
-
-<p>
-  <strong>Gender:</strong>
-  <%= @employee.gender %>
-</p>
-
-<p>
-  <strong>Marital:</strong>
-  <%= @employee.marital %>
-</p>
+    </td>
+  </tr>
+</table>
 
 <%= link_to 'Edit', edit_employee_path(@employee) %> |
 <%= link_to 'Back', employees_path %>
