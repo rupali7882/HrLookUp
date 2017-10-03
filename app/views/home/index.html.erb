@@ -1,3 +1,28 @@
-  <h1>Root page</h1>
-  <p>Find me in app/views/home/index.html.erb</p>
-  <%= link_to "sdfsdfsdfsdf", "#-"%>
+
+<div class="container-fluid">
+  <div class="col-md-3 sidebar">
+    <% if user_signed_in? %>
+     <% if current_user.has_role "hr" %>
+      <h1>User as Hr</h1>
+     <% else %>
+      <h1>User as Admin</h1>
+     <% end %>
+    <% end %>
+  </div>
+  <div class="col-md-9">
+      <ul class="list-group text-center">
+        <li class="list-group-item">
+          <a href="">Create Employees</a>
+        </li>
+        <li class="list-group-item">
+          <a href="">Create Payroll</a>
+        </li>
+        <li class="list-group-item">
+          <a href="">Check Performance</a>
+        </li>
+        <li class="list-group-item">
+          <a href="">Resume Tracking</a>
+        </li>
+      </ul>
+  </div>
+</div>

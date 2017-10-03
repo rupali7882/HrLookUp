@@ -26,6 +26,14 @@ body{
 }
 .nav{
   padding-left: 20%;
+  li{
+    a{
+      color: white;
+    }
+    a:hover{
+      color: black;
+    }
+  }
 }
 .heading{
  background-color: #0464C5;
@@ -64,4 +72,7 @@ td{
 .actions{
   width: 60%;
   margin-top: 20px;
+}
+.sidebar{
+  border-right: 5px solid #0464C5;
 }
