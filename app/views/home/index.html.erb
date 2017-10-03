@@ -3,6 +3,7 @@
   <div class="col-md-3 sidebar">
     <% if user_signed_in? %>
      <% if current_user.has_role "hr" %>
+<<<<<<< HEAD
       <h1>Hello Hr,</h1>
      <% else %>
       <h1>Hello Admin,</h1>
@@ -16,6 +17,13 @@
     </br>
     for more documentaiton visit xyz.com
     </p>
+=======
+      <h1>User as Hr</h1>
+     <% else %>
+      <h1>User as Admin</h1>
+     <% end %>
+    <% end %>
+>>>>>>> 67f49e9dfc5bd6b9138b81636f27c859dad5ccf6
   </div>
   <div class="col-md-9">
       <ul class="list-group text-center">
