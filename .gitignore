@@ -17,5 +17,5 @@
 /yarn-error.log
 
 .byebug_history
-/config/database.yml
+/config/database.yml*
 /.DS_Store*
