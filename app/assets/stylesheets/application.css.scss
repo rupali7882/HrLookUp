@@ -75,4 +75,19 @@ td{
 }
 .sidebar{
   border-right: 5px solid #0464C5;
+  height: 400px;
+}
+.hrlandinglist{
+  list-style: none;
+  font-size: 24px;
+  text-align: center;
+  li{
+    margin: 10px 0;
+    a{
+    color: black;
+    }
+    a:hover{
+      color: red;
+    }
+  }
 }
