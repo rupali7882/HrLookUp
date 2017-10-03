@@ -13,8 +13,8 @@
     <div class="text-center">
       <h1>HrLookUp</h1>
     </div>
-    
-    <% unless current_page?(root_url) %>
+
+    <% if user_signed_in? %>
       <%= render 'layouts/share/header'%>
     <% end %>
 

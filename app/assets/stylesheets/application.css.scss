@@ -17,9 +17,7 @@
 body{
   background-color: #E5F5FF;
 }
-a{
-  color: #fff;
-}
+
 .nav-tabs{
   border: none;
 }
@@ -43,4 +41,27 @@ table{
 td{
   display: block;
   text-align: left;
+}
+.new_user{
+  width: 300px;
+  margin: 50px auto;
+  label{
+    margin: auto;
+  }
+  input{
+    float: right;
+  }
+
+}
+.field{
+  property: block;
+  width: 65%;
+  label{
+    float:right;
+  }
+
+}
+.actions{
+  width: 60%;
+  margin-top: 20px;
 }
