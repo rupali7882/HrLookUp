@@ -8,3 +8,10 @@ gem 'uglifier', '>= 1.3.0'
 gem 'turbolinks', '~> 5'
 gem 'faker', '~> 1.6', '>= 1.6.3'
 gem 'listen', '~> 3.1', '>= 3.1.5'
+
+# Authentication gem
+gem 'devise'
+
+group :development, :test do
+  gem 'byebug'
+end
