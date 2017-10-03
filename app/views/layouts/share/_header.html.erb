@@ -1,6 +1,27 @@
-<% if user_signed_in? %>
-  <li><%= link_to('Logout', destroy_user_session_path, method: :delete) %></li>
-<% else %>
-  <li><%= link_to('Login', new_user_session_path)  %></li>
-  <li><%= link_to('Register', new_user_registration_path)  %></li>
-<% end %>
+
+<div class="text-center">
+  <h1>HrLookUp</h1>
+</div>
+
+<div class="navbar">
+  <div class="heading">
+    <ul class="nav nav-tabs">
+
+      <li>
+        <a href="">Home</a>
+      </li>
+      <li>
+        <a href="">Employee Details</a>
+      </li>
+      <li>
+        <a href="">Payroll</a>
+      </li>
+      <li>
+        <a href="">Performance</a>
+      </li>
+      <li>
+        <a href="">Resume tracking</a>
+      </li>
+    </ul>
+  </div>
+</div>
