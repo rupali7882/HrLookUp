@@ -9,6 +9,16 @@
   </head>
 
   <body>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+    <%= render 'layouts/share/header'%>
+    <% if current_user.has_role "hr" %>
+       <h1>User as Hr</h1>
+     <% else %>
+       <h1>User as Admin</h1>
+
+    <% end %>
     <%= yield %>
+    <%= render 'layouts/share/footer'%>
   </body>
 </html>
