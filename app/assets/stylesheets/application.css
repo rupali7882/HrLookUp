@@ -26,6 +26,9 @@ a{
 .navbar{
   border: none;
 }
+.nav{
+  padding-left: 20%;
+}
 .heading{
  background-color: #0464C5;
  color: #fff;

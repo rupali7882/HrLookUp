@@ -10,7 +10,14 @@
 
   <body>
 
-    <%= render 'layouts/share/header'%>
+    <div class="text-center">
+      <h1>HrLookUp</h1>
+    </div>
+    
+    <% unless current_page?(root_url) %>
+      <%= render 'layouts/share/header'%>
+    <% end %>
+
 
 
     <% if user_signed_in? %>
