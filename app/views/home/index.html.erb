@@ -1,3 +1,36 @@
-  <h1>Root page</h1>
-  <p>Find me in app/views/home/index.html.erb</p>
-  <%= link_to "sdfsdfsdfsdf", "#-"%>
+
+<div class="container-fluid">
+  <div class="col-md-3 sidebar">
+    <% if user_signed_in? %>
+     <% if current_user.has_role "hr" %>
+      <h1>Hello Hr,</h1>
+     <% else %>
+      <h1>Hello Admin,</h1>
+     <% end %>
+    <% end %>
+    <h3>Welcome to Hr Management System</h3>
+    <p>
+      This system is designed for small scale company to
+      manage Employees details, performance, payroll, leave management,
+      new applicants.
+    </br>
+    for more documentaiton visit xyz.com
+    </p>
+  </div>
+  <div class="col-md-9">
+      <ul class="list-group text-center">
+        <li class="list-group-item">
+          <a href="">Create Employees</a>
+        </li>
+        <li class="list-group-item">
+          <a href="">Create Payroll</a>
+        </li>
+        <li class="list-group-item">
+          <a href="">Check Performance</a>
+        </li>
+        <li class="list-group-item">
+          <a href="">Resume Tracking</a>
+        </li>
+      </ul>
+  </div>
+</div>
