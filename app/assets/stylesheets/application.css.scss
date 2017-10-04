@@ -28,7 +28,7 @@ span{
   border: none;
 }
 .nav{
-  padding-left: 20%;
+  padding-left: 2%;
   li{
     a{
       color: white;
@@ -155,10 +155,12 @@ select{
   margin: 3px;
    width: 88px;
 }
-h2 hr {
-   border-width: 5px 0 0;
-    width: 15%;
-    border-color: #004d99 !important;
+h2  {
+    color: #004d99;
+}
+.search{
+  position: relative;
+  margin-top: 3%;
 }
 .manage-lvsd ul{
 
