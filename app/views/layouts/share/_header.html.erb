@@ -3,15 +3,9 @@
     <ul class="nav nav-tabs">
       <li><%= link_to "Home", '#' %> </li>
       <li><%= link_to "Employee Details", employees_path %> </li>
-      <li>
-        <a href="">Payroll</a>
-      </li>
-      <li>
-        <a href="">Performance</a>
-      </li>
-      <li>
-        <a href="">Resume tracking</a>
-      </li>
+      <li><a href="">Payroll</a></li>
+      <li><a href="">Performance</a></li>
+      <li><a href="">Resume tracking</a></li>
       <li><%= link_to('Leave Management', entitlements_path)%></li>
       <li><%= link_to('Logout', destroy_user_session_path, method: :delete) %></li>
 
