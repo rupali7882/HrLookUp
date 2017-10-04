@@ -18,14 +18,15 @@
       <%= form.label :title %>
     </td>
     <td class="col-md-3">
-      <%= form.text_field(:title, id: :employee_title, required: true, name: "empTitle", ng: { model: "empTitle"}) %>
-      <span ng-show="empForm.empTitle.$touched && empForm.empTitle.$invalid">The name is required.</span>
+      <%= form.text_field(:title, id: :employee_title, name: "empTitle", "ng-model": "empTitle", required: true) %>
+      <span ng-show="empForm.empTitle.$touched && empForm.empTitle.$invalid">The Title is required.</span>
     </td>
     <td class="col-md-3">
       <%= form.label :empid %>
     </td>
     <td class="col-md-3">
-      <%= form.number_field :empid, id: :employee_empid %>
+      <%= form.number_field(:empid, id: :employee_empid, name: "empId", "ng-model": "empId", required: true) %>
+      <span ng-show="empForm.empId.$touched && empForm.empId.$invalid">The Id is required.</span>
     </td>
   </tr>
 
@@ -34,7 +35,8 @@
       <%= form.label :firstname %>
     </td>
     <td class="col-md-3">
-      <%= form.text_field :firstname, id: :employee_firstname %>
+      <%= form.text_field :firstname, id: :employee_firstname, name: "empName", "ng-model": "empName", required: true %>
+      <span ng-show="empForm.empName.$touched && empForm.empName.$invalid">The name is required.</span>
     </td>
     <td class="col-md-3">
       <%= form.label :midname %>
@@ -49,7 +51,8 @@
       <%= form.label :lastname %>
     </td>
     <td class="col-md-3">
-      <%= form.text_field :lastname, id: :employee_lastname %>
+      <%= form.text_field :lastname, id: :employee_lastname, name: "empLastname", "ng-model": "empLastname", required: true %>
+      <span ng-show="empForm.empLastname.$touched && empForm.empLastname.$invalid">The Last name is required.</span>
     </td>
     <td class="col-md-3">
       <%= form.label :bloodtype %>
@@ -64,13 +67,15 @@
       <%= form.label :nationality %>
     </td>
     <td class="col-md-3">
-      <%= form.text_field :nationality, id: :employee_nationality %>
+      <%= form.text_field :nationality, id: :employee_nationality, name: "empNationality", "ng-model": "empNationality", required: true  %>
+      <span ng-show="empForm.empNationality.$touched && empForm.empNationality.$invalid">The Nationality is required.</span>
     </td>
     <td class="col-md-3">
       <%= form.label :address %>
     </td>
     <td class="col-md-3">
-      <%= form.text_field :address, id: :employee_address %>
+      <%= form.text_field :address, id: :employee_address, name: "empAddress", "ng-model": "empAddress", required: true %>
+      <span ng-show="empForm.empAddress.$touched && empForm.empAddress.$invalid">The Address is required.</span>
     </td>
   </tr>
 
@@ -79,13 +84,15 @@
       <%= form.label :city %>
     </td>
     <td class="col-md-3">
-      <%= form.text_field :city, id: :employee_city %>
+      <%= form.text_field :city, id: :employee_city, name: "empCity", "ng-model": "empCity", require: true %>
+      <span ng-show="empForm.empCity.$touched && empForm.empCity.$invalid">The City is required.</span>
     </td>
     <td class="col-md-3">
       <%= form.label :state %>
     </td>
     <td class="col-md-3">
-      <%= form.text_field :state, id: :employee_state %>
+      <%= form.text_field :state, id: :employee_state, name: "empState", "ng-model": "empState", required: true %>
+      <span ng-show="empForm.empState.$touched && empForm.empState.$invalid">The State is required.</span>
     </td>
   </tr>
 
@@ -109,13 +116,16 @@
       <%= form.label :mobile %>
     </td>
     <td class="col-md-3">
-      <%= form.text_field :mobile, id: :employee_mobile %>
+      <%= form.text_field :mobile, id: :employee_mobile, name: "empMobile", "ng-model": "empMobile", required: true %>
+      <span ng-show="empForm.empMobile.$touched && empForm.empMobile.$invalid">The Mobile No. is Required.</span>
     </td>
     <td class="col-md-3">
       <%= form.label :email %>
     </td>
     <td class="col-md-3">
-      <%= form.text_field :email, id: :employee_email %>
+      <%= form.email_field :email, id: :employee_email, name: "empEmail", "ng-model": "empEmail", required: true %>
+      <span ng-show="empForm.empEmail.$touched && !empForm.empEmail.$invalid">The Email is required.</span>
+      <span ng-hide="empForm.empEmail.$valid && empForm.empEmail.$lenght"></span>
     </td>
   </tr>
 
@@ -139,7 +149,8 @@
       <%= form.label :gender %>
     </td>
     <td class="col-md-3">
-      <%= form.text_field :gender, id: :employee_gender %>
+      <%= form.text_field :gender, id: :employee_gender, name: "empGender", "ng-model": "empGender", required: true %>
+      <span ng-show="empForm.empGender.$touched && empForm.empGender.$invalid">The gender is required.</span>
     </td>
     <td class="col-md-3">
       <%= form.label :marital %>
