@@ -17,6 +17,9 @@
 body{
   background-color: #E5F5FF;
 }
+span{
+  margin: 10px;
+}
 
 .nav-entitle-tabs{
   border: none;
@@ -59,7 +62,7 @@ td{
   border: 1px solid #e2e2e2;
   box-shadow: 5px 6px 15px;
   margin: 50px auto;
-  padding: 50px;
+  padding: 5px 50px;
   width: 500px;
   label{
     margin: auto;
@@ -77,7 +80,7 @@ td{
      float: right;
 
   }
-  
+
 
 }
 .field{
@@ -158,9 +161,9 @@ h2 hr {
     border-color: #004d99 !important;
 }
 .manage-lvsd ul{
-  
+
   list-style: none;
-  
+
   li {
       padding: 10px;
       border: solid 2px #0464c5;
