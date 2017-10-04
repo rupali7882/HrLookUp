@@ -1,0 +1,2 @@
+class EntitlementsController < ApplicationController
+end

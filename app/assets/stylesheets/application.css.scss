@@ -18,7 +18,7 @@ body{
   background-color: #E5F5FF;
 }
 
-.nav-tabs{
+.nav-entitle-tabs{
   border: none;
 }
 .navbar{
@@ -43,7 +43,7 @@ body{
  padding: 10px 5px;
 
 }
-table{
+entitle-table{
   width: 100%;
   margin-top: 20px;
 }
@@ -138,3 +138,37 @@ h2 hr {
     width: 15%;
     border-color: #004d99 !important;
 }
+.manage-lvsd ul{
+  
+  list-style: none;
+  
+  li {
+      padding: 10px;
+      border: solid 2px #0464c5;
+      margin-bottom: 3px;
+      font-size: 18px;
+      cursor: pointer;
+  }
+  li:hover{
+    background-color: #0464c5;
+    a {
+         color: #fff;
+         text-decoration: none;
+      }
+  }
+}
+.entitle-tab button{
+  width: 100%;
+  font-size: 17px;
+  background-color: #fff;
+  border: solid 2px #0464c5;
+  margin-bottom: 2px;
+  padding: 10px;
+  font-weight: 700;
+
+}
+
+ .entitle-tab button:hover {
+      background-color: #0464c5;
+      color: #fff;
+  }

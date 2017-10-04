@@ -1,0 +1,2 @@
+class Entitlement < ApplicationRecord
+end
