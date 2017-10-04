@@ -1,4 +1,5 @@
-<%= form_with(model: employee, local: true) do |form| %>
+
+<%= form_with(model: employee, local: true, html: {name: "empForm"}) do |form| %>
   <% if employee.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(employee.errors.count, "error") %> prohibited this employee from being saved:</h2>
@@ -17,7 +18,8 @@
       <%= form.label :title %>
     </td>
     <td class="col-md-3">
-      <%= form.text_field :title, id: :employee_title %>
+      <%= form.text_field(:title, id: :employee_title, required: true, name: "empTitle", ng: { model: "empTitle"}) %>
+      <span ng-show="empForm.empTitle.$touched && empForm.empTitle.$invalid">The name is required.</span>
     </td>
     <td class="col-md-3">
       <%= form.label :empid %>
