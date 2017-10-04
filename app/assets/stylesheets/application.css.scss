@@ -55,15 +55,29 @@ entitle-table{
 td{
   text-align: left;
 }
-.new_user{
-  width: 300px;
+.user-form{
+  border: 1px solid #e2e2e2;
+  box-shadow: 5px 6px 15px;
   margin: 50px auto;
+  padding: 50px;
+  width: 500px;
   label{
     margin: auto;
   }
-  input{
-    float: right;
+  .form-btn{
+    border-radius: 0;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: 700;
+    padding: 10px;
+    width: 100%;
   }
+  select{
+     width: 100%;
+     float: right;
+
+  }
+  
 
 }
 .field{
@@ -75,7 +89,7 @@ td{
 
 }
 .actions{
-  width: 60%;
+  width: 100%;
   margin-top: 20px;
 }
 .sidebar{

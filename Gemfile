@@ -12,6 +12,9 @@ gem 'listen', '~> 3.1', '>= 3.1.5'
 # Authentication gem
 gem 'devise'
 
+# Image processing
+gem "paperclip", "~> 5.0.0"
+
 group :development, :test do
   gem 'byebug'
 end
