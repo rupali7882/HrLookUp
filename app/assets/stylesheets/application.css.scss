@@ -93,3 +93,42 @@ td{
 #name{
   margin-left: 35%;
 }
+
+input[type='email'], input[type='password'],input[type="text"],
+select
+{
+  border: 1px solid #00001a;
+  border-radius: 0;
+  box-sizing: border-box;
+  color: #00234b;
+  font-family: "sharp-sans-medium",Arial,sans-serif;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: normal;
+  height: 48px;
+  line-height: 24px;
+  margin: 0;
+  padding: 14px 12px 12px;
+  text-rendering: optimizelegibility;
+  width: 100%;
+  margin: 3px;
+}
+
+
+select{
+  border: 1px solid #00001a;
+  border-radius: 0;
+  box-sizing: border-box;
+  color: #00234b;
+  font-family: "sharp-sans-medium",Arial,sans-serif;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: normal;
+  height: 48px;
+  line-height: 24px;
+  margin: 0;
+  padding: 14px 12px 12px;
+  text-rendering: optimizelegibility;
+  margin: 3px;
+   width: 88px;
+}
