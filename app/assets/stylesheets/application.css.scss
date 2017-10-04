@@ -35,10 +35,11 @@ body{
     }
   }
 }
+
 .heading{
  background-color: #0464C5;
  color: #fff;
- font-size: 24px;
+ font-size: 17px;
  padding: 10px 5px;
 
 }
@@ -131,4 +132,9 @@ select{
   text-rendering: optimizelegibility;
   margin: 3px;
    width: 88px;
+}
+h2 hr {
+   border-width: 5px 0 0;
+    width: 15%;
+    border-color: #004d99 !important;
 }
