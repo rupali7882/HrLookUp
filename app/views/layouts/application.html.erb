@@ -10,16 +10,22 @@
 
   <body ng-app="">
 
+    <%= render 'layouts/share/flash_message'%>
+
     <div class="text-center">
       <h1>HrLookUp</h1>
     </div>
 
     <% if user_signed_in? %>
       <%= render 'layouts/share/header'%>
+    <% else %>
+      <div class="heading"></div>
     <% end %>
 
-    <%= render 'layouts/share/flash_message'%>
-    <%= yield %>
+    <div class="container">
+      <%= yield %>
+    </div>
+
 
     <%= render 'layouts/share/footer'%>
 
