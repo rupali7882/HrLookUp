@@ -1,24 +1,18 @@
-# README
+HrLookUp
+===========
+[![Build Status]()]()
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+HrLookUp is a [Human Resource Management Web Application]() which enable companies of all sizes to [manage Human Resource activities]()
+properly. A complete set of Human Management Software with advance Employee Search queries.
 
-Things you may want to cover:
+Some Advance Features
+-------------
+ * Employee lone, tax, deductions, employee saving for employee login by ID.
+ * Recruitment In-house, Employee referral, Quick search activities from database.
+ * Advance Planing for Training and Development, Building Human Pillars.
+ * Peple Management:- Allocation of employees, resources, Deciding timelines, setting objectives, client interaction.
+ * Appraisal including discussing the past year's performance, identifying potential, employee ratings.
+ * HR Policies
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Installation
+------------
