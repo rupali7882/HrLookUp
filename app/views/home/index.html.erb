@@ -1,37 +1,9 @@
 
 <div class="container-fluid">
-  <div class="col-md-3 sidebar">
-    <% if user_signed_in? %>
+   <% if user_signed_in? %>
      <% if current_user.has_role "hr" %>
-      <h1>Hello Hr,</h1>
-     <% else %>
-      <h1>Hello Admin,</h1>
+         <%= render 'hr_landingp' %>
      <% end %>
     <% end %>
-    <h3>Welcome to Hr Management System</h3>
-    <p>
-      This system is designed for small scale company to
-      manage Employees details, performance, payroll, leave management,
-      new applicants.
-    </br>
-    for more documentaiton visit xyz.com
-    </p>
-    <%= button_to('Logout', destroy_user_session_path, method: :delete) %>
-  </div>
-  <div class="col-md-9">
-    <ul class="hrlandinglist">
-      <li class="hrlandinglist-item">
-         <%= link_to "Create Employee", new_employee_path %>
-      </li>
-      <li class="hrlandinglist-item">
-        <a href="">Create Payroll</a>
-      </li>
-      <li class="hrlandinglist-item">
-        <a href="">Check Performance</a>
-      </li>
-      <li class="hrlandinglist-item">
-        <a href="">Resume Tracking</a>
-      </li>
-    </ul>
-  </div>
+
 </div>

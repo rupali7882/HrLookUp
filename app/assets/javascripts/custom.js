@@ -3,6 +3,16 @@ $('document').ready(function() {
     $('.alert').slideUp();
   }, 3000);
 
+  $("#pictureInput").change(function(){
+      $.ajax({
+          method: "PATCH",
+          url: "/users/upload_profile",
+          data: { name: $("#pictureInput").val() }
+      })
+  })
+
+
+
 });
 
 function openCity(evt, cityName) {

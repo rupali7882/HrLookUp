@@ -9,4 +9,9 @@ Rails.application.routes.draw do
 
   resources :employees
   resources :entitlements
+  resource :users do
+  	collection do
+  	  patch :upload_profile 
+  	end
+  end
 end

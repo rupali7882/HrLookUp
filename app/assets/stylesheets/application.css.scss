@@ -117,10 +117,10 @@ td{
   margin-left: 35%;
 }
 
-input[type='email'], input[type='password'],input[type="text"],
+input[type='email'], input[type='password'],input[type="text"],input[type="search"],
 select
 {
-  border: 1px solid #00001a;
+  border: 1px solid #0464c5;
   border-radius: 0;
   box-sizing: border-box;
   color: #00234b;
@@ -139,7 +139,7 @@ select
 
 
 select{
-  border: 1px solid #00001a;
+  border: 1px solid #0464c5;
   border-radius: 0;
   box-sizing: border-box;
   color: #00234b;
@@ -196,3 +196,18 @@ h2  {
       background-color: #0464c5;
       color: #fff;
   }
+
+.search input{
+  color: #000;
+}
+.profile_tab{
+  span {
+    float: right;
+  }
+}
+
+.large-heading{
+  color: #00234b;
+  font-size: 53px;
+  font-weight: 700;
+}
