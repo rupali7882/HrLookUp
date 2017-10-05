@@ -22,7 +22,4 @@ Employee.delete_all
     marital: "single"
     }])
 
-  Payroll.create!([{
-    
-    }])
 end
