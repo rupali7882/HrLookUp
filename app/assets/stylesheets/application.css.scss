@@ -17,6 +17,9 @@
 body{
   background-color: #E5F5FF;
 }
+span{
+  margin: 10px;
+}
 
 .nav-entitle-tabs{
   border: none;
@@ -25,7 +28,7 @@ body{
   border: none;
 }
 .nav{
-  padding-left: 20%;
+  padding-left: 5%;
   li{
     a{
       color: white;
@@ -59,7 +62,7 @@ td{
   border: 1px solid #e2e2e2;
   box-shadow: 5px 6px 15px;
   margin: 50px auto;
-  padding: 50px;
+  padding: 5px 50px;
   width: 500px;
   label{
     margin: auto;
@@ -77,7 +80,7 @@ td{
      float: right;
 
   }
-  
+
 
 }
 .field{
@@ -152,15 +155,17 @@ select{
   margin: 3px;
    width: 88px;
 }
-h2 hr {
-   border-width: 5px 0 0;
-    width: 15%;
-    border-color: #004d99 !important;
+h2  {
+    color: #004d99;
+}
+.search{
+  position: relative;
+  margin-top: 2%;
 }
 .manage-lvsd ul{
-  
+
   list-style: none;
-  
+
   li {
       padding: 10px;
       border: solid 2px #0464c5;
