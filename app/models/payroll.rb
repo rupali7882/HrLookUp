@@ -1,0 +1,2 @@
+class Payroll < ApplicationRecord
+end

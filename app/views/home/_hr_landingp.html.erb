@@ -18,7 +18,7 @@
 </div>
 <div class="col-md-9">
       <h1 class="text-center large-heading">Find a Employee.</h1>
-      <%= form_tag("/search", method: "get") do %>
-        <%= text_field_tag :search, "Employee Name, Employee Id, Designation" %>
+      <%= form_tag(employees_search_path, method: "get") do %>
+        <%= search_field_tag :keywords, params[:keywords], :placeholder => "Employee Name, Employee Id, Designation" %>
       <% end %>
 </div>

@@ -7,9 +7,11 @@ Rails.application.routes.draw do
       root 'devise/sessions#new', as: :unauthenticated_root
   end
 
+  get 'employees/search', to: "employees#index"
+
   resources :employees
   resources :entitlements
   resource :users do
-  	patch :upload_profile, on: :collection 
+  	patch :upload_profile, on: :collection
   end
 end

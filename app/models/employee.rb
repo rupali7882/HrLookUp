@@ -10,4 +10,8 @@ class Employee < ApplicationRecord
 		"#{self.title} #{self.firstname} #{self.midname} #{lastname}"
 	end
 
+
+
+  scope :search, ->(keywords){where(title: keywords) if keywords.present?}
+
 end
