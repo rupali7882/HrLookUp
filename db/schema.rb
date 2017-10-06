@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171005063705) do
+ActiveRecord::Schema.define(version: 20171005175254) do
 
   create_table "employees", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "title"
@@ -37,11 +37,24 @@ ActiveRecord::Schema.define(version: 20171005063705) do
     t.string "profile_content_type"
     t.integer "profile_file_size"
     t.datetime "profile_updated_at"
+    t.text "keywords"
   end
 
   create_table "entitlements", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "name"
     t.string "total_leave"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "payrolls", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer "min_salary"
+    t.integer "max_salary"
+    t.integer "emp_salary"
+    t.integer "tax"
+    t.integer "deduction"
+    t.string "designation"
+    t.integer "employee_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

@@ -21,4 +21,5 @@ Employee.delete_all
     gender: "male",
     marital: "single"
     }])
+
 end

@@ -4,14 +4,14 @@ Rails.application.routes.draw do
 
   devise_scope :user do
       root 'home#index', as: :authenticated_root
-      root 'devise/sessions#new', as: :unauthenticated_root   
+      root 'devise/sessions#new', as: :unauthenticated_root
   end
+
+  get 'employees/search', to: "employees#index"
 
   resources :employees
   resources :entitlements
   resource :users do
-  	collection do
-  	  patch :upload_profile 
-  	end
+  	patch :upload_profile, on: :collection
   end
 end
