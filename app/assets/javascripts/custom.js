@@ -4,15 +4,12 @@ $('document').ready(function() {
   }, 3000);
 
   $("#pictureInput").change(function(){
-      $.ajax({
-          method: "PATCH",
-          url: "/users/upload_profile",
-          data: { name: $("#pictureInput").val() }
-      })
-  })
+      $(".upload_profile").submit()
+  });
 
+  $('.entitle-content .tabcontent').hide().slice(0, 1).show();
 
-
+  
 });
 
 function openCity(evt, cityName) {

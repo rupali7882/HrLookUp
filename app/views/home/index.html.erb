@@ -1,9 +1,7 @@
-
 <div class="container-fluid">
    <% if user_signed_in? %>
      <% if current_user.has_role "hr" %>
          <%= render 'hr_landingp' %>
      <% end %>
     <% end %>
-
 </div>

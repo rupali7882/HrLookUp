@@ -2,17 +2,17 @@
 <div class="container-fluid">
   <div class="col-md-3 sidebar manage-lvsd">
     <div class="entitle-tab">
-      <button class="tablinks" onclick="openCity(event, 'leave')">Create Leave</button>
+      <button class="tablinks active" onclick="openCity(event, 'leave')">Create Leave</button>
       <button class="tablinks" onclick="openCity(event, 'policy')">Leave Policy</button>
       <button class="tablinks" onclick="openCity(event, 'holiday')">Holidays</button>
       <button class="tablinks" onclick="openCity(event, 'setting')">Setting</button>
     </div>
   </div>
-  <div class="col-md-9">
+  <div class="col-md-9 entitle-content">
+    
     <div id="leave" class="tabcontent">
-      <h3>leave</h3>
-      <p>leave is the capital city of England.</p>
-    </div>
+      <%= render "form", entitlement: @entitlement%>
+   </div>
 
     <div id="policy" class="tabcontent">
       <h3>policy</h3>

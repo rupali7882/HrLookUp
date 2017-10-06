@@ -1,10 +1,9 @@
 <div class="col-md-3 sidebar">
   <div class="profile_tab">
-      <%= image_tag(current_user.avatar.url)%>
-
-     <%= form_tag "#", html: { :multipart => true }, :class=>"upload_profile" do %>
+    <%= image_tag(current_user.avatar.url)%>
+    <%= form_tag upload_profile_users_path, :multipart => true, :method=>"PATCH", :class=>"upload_profile" do %>
       <%= file_field_tag :avatar, :id=>"pictureInput"%>
-      <% end %>
+    <% end %>
   </div>
   <h3>Welcome to Hr Management System</h3>
   <p>
@@ -17,8 +16,8 @@
 
 </div>
 <div class="col-md-9">
-      <h1 class="text-center large-heading">Find a Employee.</h1>
-      <%= form_tag(employees_search_path, method: "get") do %>
-        <%= search_field_tag :keywords, params[:keywords], :placeholder => "Employee Name, Employee Id, City, Gender, Email, Marital" %>
-      <% end %>
+    <h1 class="text-center large-heading">Find a Employee.</h1>
+    <%= form_tag(employees_search_path, method: "get") do %>
+      <%= search_field_tag :keywords, params[:keywords], :placeholder => "Employee Name, Employee Id, City, Gender, Email, Marital" %>
+    <% end %>
 </div>

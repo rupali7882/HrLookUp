@@ -118,7 +118,7 @@ td{
 }
 
 input[type='email'], input[type='password'],input[type="text"],input[type="search"],
-select
+select, input[type='tel']
 {
   border: 1px solid #0464c5;
   border-radius: 0;
@@ -204,6 +204,11 @@ h2  {
   span {
     float: right;
   }
+  img{
+    border: 1px solid #e2e2e2;
+    height: 200px;
+    width: 250px;
+  }
 }
 
 .large-heading{
@@ -211,3 +216,20 @@ h2  {
   font-size: 53px;
   font-weight: 700;
 }
+
+.dropdown-menu{
+ 
+  li {
+    border-bottom: solid 2px #0464c5;}
+  
+  li a{
+   color: #000;
+  }
+}
+
+h2 hr{
+
+    border: 3px solid #0464c5;
+    height: 0;
+    width: 10%;
+  }

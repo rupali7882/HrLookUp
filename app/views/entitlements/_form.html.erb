@@ -1,0 +1,56 @@
+<div class="">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Total Leave</th>
+      </tr>
+    </thead>
+
+    <tbody class="entitlement-all">
+      <% @entitlements.each do |ent| %>
+        <tr>
+          <td><%= ent.name %></td>
+          <td><%= ent.total_leave %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<br>
+</div>
+
+<h2 class="text-center">Create leave <hr/></h2>
+
+<%= form_with(model: entitlement, :class=>"entForm", :remote=>true) do |form| %>
+  <% if entitlement.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(entitlement.errors.count, "error") %> prohibited this entitlement from being saved:</h2>
+
+      <ul>
+      <% entitlement.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <table>
+    <tr>
+      <td class="col-md-3"><%= form.label :name %></td>
+        <td class="col-md-6">
+          <%= form.text_field(:name, required: true, :placeholder=>"Leave Name") %>
+        </td>
+    </tr>
+    <tr>
+      <td class="col-md-3"><%= form.label :total_leave %></td>
+        <td class="col-md-6">
+          <%= form.text_field(:total_leave, required: true, :placeholder=>"Total Leave") %>
+        </td>
+    </tr>
+  </table>
+
+  <div class="actions text-center">
+    <%= form.submit "ADD", :class=>"btn btn-primary"%>
+  </div>
+  <span></span>
+<% end %>

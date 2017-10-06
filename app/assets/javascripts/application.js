@@ -12,5 +12,6 @@
 //
 //= require rails-ujs
 //= require jquery
+//= require bootstrap.min
 //= require angular
 //= require_tree .
