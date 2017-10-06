@@ -1,4 +1,13 @@
 Employee.delete_all
+Designation.delete_all
+
+2.times do
+  Designation.create!([{
+    title: Faker::Job.title,
+    salary: Faker::Number.number(4)
+    }])
+
+end
 
 10.times do
   Employee.create!([{
@@ -19,7 +28,8 @@ Employee.delete_all
     joined_at: Faker::Date.between(1.year.ago, Date.today),
     birth_date:Faker::Date.birthday,
     gender: "male",
-    marital: "single"
+    marital: "single",
+    designation_id: Faker::Number.between(1,2)
     }])
 
 end
