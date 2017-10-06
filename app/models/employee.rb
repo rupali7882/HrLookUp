@@ -16,9 +16,11 @@ class Employee < ApplicationRecord
 	end
 
   protected
+
     def set_keywords
+      designat = self.designation.title
       empi = empid.to_s
-      self.keywords = [fullname, empi, city, gender, email, marital].map(&:downcase).join(' ')
+      self.keywords = [fullname, empi, city, gender, email, marital, designat].map(&:downcase).join(' ')
     end
 
 end

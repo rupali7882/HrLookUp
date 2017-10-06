@@ -1,12 +1,10 @@
 Employee.delete_all
-Designation.delete_all
 
 2.times do
   Designation.create!([{
     title: Faker::Job.title,
     salary: Faker::Number.number(4)
     }])
-
 end
 
 10.times do
