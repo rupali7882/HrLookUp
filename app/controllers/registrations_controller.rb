@@ -4,10 +4,10 @@ class RegistrationsController < Devise::RegistrationsController
   end
 
   def create
-  	super do
+  	super
+      debugger
       user_role = resource.build_role(:name=>params[:name])
       user_role.save
-    end
   end
 
   def update

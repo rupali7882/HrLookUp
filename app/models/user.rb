@@ -10,7 +10,7 @@ class User < ApplicationRecord
 
 
   def has_role name
-  	(self.role.name=="HR") ? true : false
+  	(role.name=="HR") ? true : false
   end
 
 end
