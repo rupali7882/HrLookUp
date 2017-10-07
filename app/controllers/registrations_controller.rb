@@ -5,7 +5,6 @@ class RegistrationsController < Devise::RegistrationsController
 
   def create
   	super
-      debugger
       user_role = resource.build_role(:name=>params[:name])
       user_role.save
   end
