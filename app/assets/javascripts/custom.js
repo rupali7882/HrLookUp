@@ -6,9 +6,15 @@ $('document').ready(function() {
   $("#pictureInput").change(function(){
       $(".upload_profile").submit()
   });
+   
+  $("#keywords").blur(function(){
+    word = $("#keywords").val()
+    if(word.length > 0){
+        $(".search-form").submit()
+    }
+  });
 
   $('.entitle-content .tabcontent').hide().slice(0, 1).show();
-
   
 });
 

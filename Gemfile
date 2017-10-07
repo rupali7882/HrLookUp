@@ -12,6 +12,7 @@ gem 'devise'
 # Image processing 
 gem "paperclip", "~> 5.0.0"
 gem "mini_magick"
+gem 'roo'
 
 
 group :development, :test do

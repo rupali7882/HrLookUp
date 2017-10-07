@@ -15,6 +15,7 @@ class Employee < ApplicationRecord
   scope :search, ->(keywords){where('keywords LIKE ?', "%#{keywords.downcase}%") if keywords.present?}
 
   protected
+  
     def set_keywords
       empi = empid.to_s
       self.keywords = [fullname, empi, city, gender, email, marital].map(&:downcase).join(' ')

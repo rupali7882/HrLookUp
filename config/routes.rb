@@ -9,7 +9,9 @@ Rails.application.routes.draw do
 
   get 'employees/search', to: "employees#index"
 
-  resources :employees
+  resources :employees do
+    post :import, on: :collection
+  end
   resources :entitlements
   resource :users do
   	patch :upload_profile, on: :collection

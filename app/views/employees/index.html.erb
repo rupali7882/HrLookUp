@@ -1,5 +1,19 @@
+<span style="float: right;"><%= link_to "Register Employee", new_employee_path , :class=>"outline-btn"%></span>
 <div class="row">
-  <%= link_to "Register Employee", new_employee_path %>
+
+  <div class="col-md-12">
+    <div class="text-center">
+      <h1 class="large-heading">Find a Employee.</h1>
+      <%= form_tag(employees_search_path, method: "get", :class=>"search-form" ) do %>
+        <%= search_field_tag :keywords, params[:keywords], :placeholder => "Employee Name, Employee Id, City, Gender, Email, Marital" %>
+      <% end %>
+    </div>
+
+  </div>
+
+  
+  <div class="row"></div> 
+
   <h2 class="text-center">Employees Details <hr/></h2>
 </div>
 

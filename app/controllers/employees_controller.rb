@@ -1,5 +1,5 @@
 class EmployeesController < ApplicationController
-  before_action :set_employee, only: [ :show, :edit, :update, :destroy]
+  before_action :set_employee, only: [ :show, :edit, :update, :destroy, :import]
 
   # GET /employees
   def index
@@ -44,6 +44,13 @@ class EmployeesController < ApplicationController
   def destroy
     @employee.destroy
     redirect_to employees_url, notice: 'Employee was successfully destroyed.'
+  end
+
+  def import
+    Timesheet.import(params[:file],@employee.id)
+    redirect_to @employee, notice: 'Timesheet was imported successfully.'
+
+
   end
 
   private

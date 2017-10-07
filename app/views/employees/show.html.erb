@@ -1,4 +1,3 @@
-<p id="notice"><%= notice %></p>
 <div class="text-center">
   <h2 class="text-center">Welcome to Employee Details <hr/></h2>
 </div>
@@ -133,3 +132,10 @@
     </td>
   </tr>
 </table>
+
+<h2> Import Employee Timesheet</h2>
+<%= form_tag import_employees_path, multipart: true do %>
+  <%= file_field_tag :file %>
+  <%= hidden_field_tag :id, @employee.id%>
+  <%= submit_tag "Import" %>
+<% end %>
