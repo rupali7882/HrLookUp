@@ -11,6 +11,7 @@ Rails.application.routes.draw do
 
   resources :employees do
     post :import, on: :collection
+    get :attendence, on: :member
   end
   resources :entitlements
   resource :users do

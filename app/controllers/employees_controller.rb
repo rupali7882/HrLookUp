@@ -1,5 +1,5 @@
 class EmployeesController < ApplicationController
-  before_action :set_employee, only: [ :show, :edit, :update, :destroy, :import]
+  before_action :set_employee, only: [ :show, :edit, :update, :destroy, :import, :attendence]
 
   # GET /employees
   def index
@@ -49,8 +49,10 @@ class EmployeesController < ApplicationController
   def import
     Timesheet.import(params[:file],@employee.id)
     redirect_to @employee, notice: 'Timesheet was imported successfully.'
+  end
 
-
+  def attendence
+    @attendence = @employee.timesheets
   end
 
   private

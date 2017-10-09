@@ -6,6 +6,7 @@ class Employee < ApplicationRecord
   has_attached_file :profile, styles: { medium: "300x300>", thumb: "100x100>" }, default_url: "/assets/profile-default-male.png"
   validates_attachment_content_type :profile, content_type: /\Aimage\/.*\z/
 
+  has_many :timesheets
 	def fullname
 		"#{self.title} #{self.firstname} #{self.midname} #{lastname}"
 	end

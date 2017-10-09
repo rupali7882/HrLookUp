@@ -68,8 +68,14 @@ ActiveRecord::Schema.define(version: 20171007053800) do
 
   create_table "timesheets", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer "employee_id"
-    t.datetime "in_time"
-    t.datetime "out_time"
+    t.string "name"
+    t.time "in"
+    t.time "out"
+    t.string "shift"
+    t.date "day"
+    t.string "holiday"
+    t.string "status"
+    t.string "shift_attendent"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
