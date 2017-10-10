@@ -1,0 +1,48 @@
+<h2 class="text-center">Employees timesheet <hr/></h2>
+
+<div class="row">
+  <div class="col-md-8">
+    
+  </div>
+  <div class="col-md-4">
+    <%= form_tag "#" do %>
+       <input type="text" id="datepicker">
+    <% end %>
+  </div>
+</div>
+
+
+
+<% if !@timesheet.blank? %>
+    <h3> <%= @timesheet.last.day.strftime("%B %Y") %> </h3>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>in_time</th>
+          <th>out_time</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @timesheet.each do |timesheet| %>
+          <% if timesheet.holiday.present? %>
+            <tr style="background: #ffcccc">
+                <th> <%= timesheet.day.strftime('%d-%a-%Y') %></th>
+                <th> <%= timesheet.holiday %></th>
+                <th></th>
+            </tr>
+          <% else %>
+            <tr>
+              <td><%= timesheet.day.strftime('%d-%a-%Y') %></td>
+              <td><%= timesheet.in_time.strftime("%I:%M%p") %></td>
+              <td><%= timesheet.out_time.strftime("%I:%M%p") %></td>
+            </tr>
+          <% end %>
+           
+        <% end %>
+      </tbody>
+    </table>
+  <% else %>
+    <h3>timesheet Sheet Not Found </h3>
+  <% end %>

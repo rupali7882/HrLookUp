@@ -46,15 +46,6 @@ class EmployeesController < ApplicationController
     redirect_to employees_url, notice: 'Employee was successfully destroyed.'
   end
 
-  def import
-    Timesheet.import(params[:file],@employee.id)
-    redirect_to @employee, notice: 'Timesheet was imported successfully.'
-  end
-
-  def attendence
-    @attendence = @employee.timesheets
-  end
-
   private
     # Use callbacks to share common setup or constraints between actions.
 

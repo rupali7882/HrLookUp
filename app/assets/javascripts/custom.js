@@ -15,6 +15,8 @@ $('document').ready(function() {
   });
 
   $('.entitle-content .tabcontent').hide().slice(0, 1).show();
+  $( "#datepicker" ).datepicker();
+ 
   
 });
 

@@ -1,7 +1,7 @@
 class Timesheet < ApplicationRecord
   belongs_to :employee
 
-  def self.import(file,emp_id)
+  def self.import(file)
     spreadsheet = open_spreadsheet(file)
     (2..spreadsheet.last_column).each do |sh_col|
        column = spreadsheet.column(sh_col)
@@ -23,5 +23,4 @@ class Timesheet < ApplicationRecord
       else raise "Unknown file type: #{file.original_filename}"
     end
   end 
-
 end

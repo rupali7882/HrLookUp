@@ -9,12 +9,13 @@ Rails.application.routes.draw do
 
   get 'employees/search', to: "employees#index"
 
-  resources :employees do
-    post :import, on: :collection
-    get :attendence, on: :member
-  end
+  resources :employees 
   resources :entitlements
   resource :users do
   	patch :upload_profile, on: :collection
+  end
+  resources :payroll do
+    get :timesheet, on: :collection
+    post :import, on: :collection
   end
 end
