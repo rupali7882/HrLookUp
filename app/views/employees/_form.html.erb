@@ -1,5 +1,4 @@
-
-<%= form_with(model: employee, local: true, html: {name: "empForm"}) do |form| %>
+<%= form_with(model: employee, local: true, html: {name: "empForm",:class=>"empForm"}) do |form| %>
   <% if employee.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(employee.errors.count, "error") %> prohibited this employee from being saved:</h2>
@@ -12,73 +11,112 @@
     </div>
   <% end %>
 
+    <h4 class="blue-text">Personal Information</h4>
     <div class="row">
-      <div class="form-group col-md-3">
-        <%= form.label :title %>
-        <%= form.text_field(:title, id: :employee_title,
-                            required: true, :placeholder=>"Mr/Mrs/Miss") %>
-      </div>
-
       <div class="form-group col-md-3">
         <%= form.label :empid %>
         <%= form.number_field(:empid, 
                               required: true) %>
       </div>
 
-      <div class="col-md-2 form-group">
-        <%= form.label :designation %><br/>
-        <%= form.select :designation, options_for_select(designation), :prompt=>"Select"%>
-      </div>
-    </div>
-
-    <div class="row">
       <div class="col-md-3 form-group">
-        <%= form.label :firstname %>
+        <%= form.label "First Name" %>
         <%= form.text_field :firstname,required: true,
                             :placeholder=>"First Name" %>
       </div>
 
+
+    </div>
+
+    <div class="row">
+     
       <div class="col-md-3 form-group">
-        <%= form.label :midname %>
+        <%= form.label "Middle Name" %>
         <%= form.text_field :midname,
                             :placeholder=>"Middle Name" %>
       </div>
 
       <div class="col-md-3 form-group">
-        <%= form.label :lastname %>
+        <%= form.label "Last Name" %>
         <%= form.text_field :lastname, :placeholder=>"Last Name" %>
       </div>
 
     </div>
 
     <div class="row">
+      <div class="col-md-1 form-group">
+       <%= form.label :gender %></br>
+       <%= form.select :gender, [["Male", 1], ["Female", 2]], :prompt=>"Gender" %>
+      </div>
+
+      <div class="col-md-1 form-group">
+        <%= form.label :marital %><br/>
+        <%= form.select :marital, options_for_select(['Married','Unmarried']), :prompt=>"Select"%>
+      </div>
+
+      <div class="col-md-1 form-group">
+        <%= form.label "blood Type" %><br/>
+        <%= form.select :bloodtype, options_for_select(blood), :prompt=>"Blood Group"%>
+      </div>
+
+      <div class="col-md-5 form-group">
+        <%= form.label :birth_date %><br/>
+        <%= form.date_select :birth_date %>
+      </div>
+     
+    </div>
+
+   
+
+    <div class="row">
+     
       <div class="col-md-3 form-group">
         <%= form.label :nationality %><br/>
         <%= form.text_field :nationality, required: true,
                             :placeholder=>"nationality"  %>
       </div>
 
-      <div class="col-md-3 form-group">
-        <%= form.label :homenumber %>
-        <%= form.text_field :homenumber,required: true,
-                            :placeholder =>"Home number" %>
+      <div class="col-md-5 form-group">
+        <%= form.label "Joining Date" %><br/>
+        <%= form.date_select :joined_at %>
+      </div>
+
+    </div>
+
+    <h4 class="blue-text">Contact Information</h4>
+    <div class="row">
+       <div class="col-md-3 form-group">
+        <%= form.label "Mobile Number" %><br/>
+        <%= form.telephone_field :mobile, required: true,
+                                 :placeholder=>"Mobile number" %>
       </div>
 
       <div class="col-md-3 form-group">
-        <%= form.label :mobile %><br/>
-        <%= form.telephone_field :mobile, required: true,
-                                 :placeholder=>"Mobile number" %>
-
+        <%= form.label "Emergency Number" %>
+        <%= form.text_field :homenumber,required: true,
+                            :placeholder =>"Emergency number" %>
       </div>
     </div>
 
+    <h4 class="blue-text">Address Information</h4>
+
     <div class="row">
+      <div class="col-md-3 form-group">
+        <%= form.label "Street" %><br/>
+        <%= form.text_field :address, required: true,
+                                 :placeholder=>"Street" %>
+      </div>
+
       <div class="col-md-3 form-group">
         <%= form.label :city %><br/>
         <%= form.text_field :city, required: true,
                             :placeholder=>"City"  %>
       </div>
+     
+    </div>
 
+
+    <div class="row">
       <div class="col-md-3 form-group">
         <%= form.label :state %>
         <%= form.text_field :state,required: true,
@@ -93,24 +131,9 @@
       
     </div>
 
-    <div class="row">
-      <div class="col-md-3 form-group">
-        <%= form.label :address %><br/>
-        <%= form.text_field :address, required: true,
-                                 :placeholder=>"Address" %>
 
-      </div>
-      <div class="col-md-3 form-group">
-       <%= form.label :gender %></br>
-       <%= form.select :gender, [["Male", 1], ["Female", 2]], :prompt=>"Gender" %>
-      </div>
 
-      <div class="col-md-3 form-group">
-        <%= form.label :marital %><br/>
-        <%= form.select :marital, options_for_select(['Married','Unmarried']), :prompt=>"Select"%>
-      </div>
-     
-    </div>
+    <h4 class="blue-text">Professional Information</h4>
 
     <div class="row">
       <div class="col-md-3 form-group">
@@ -125,27 +148,17 @@
                             required: true %>
       </div>
 
-      <div class="col-md-3 form-group">
-        <%= form.label :bloodtype %><br/>
-        <%= form.select :bloodtype, options_for_select(blood), :prompt=>"Blood Group"%>
-      </div>
+     
     </div>
 
     <div class="row">
 
-       <div class="col-md-5 form-group">
-        <%= form.label :joined_at %><br/>
-        <%= form.date_select :joined_at %>
-      </div>
-
-      <div class="col-md-5 form-group">
-        <%= form.label :birth_date %><br/>
-        <%= form.date_select :birth_date %>
-      </div>
+   
     </div>
 
-  <div class="actions text-center">
+  <div class="actions">
     <%= form.submit "Submit", :class=>"btn btn-primary"%>
   </div>
   <span></span>
 <% end %>
+
