@@ -12,127 +12,137 @@
     </div>
   <% end %>
 
-  <table>
-    <tr>
-
-      <td class="col-md-3"><%= form.label :title %></td>
-      <td class="col-md-3">
+    <div class="row">
+      <div class="form-group col-md-3">
+        <%= form.label :title %>
         <%= form.text_field(:title, id: :employee_title,
-                            required: true) %>
-      </td>
+                            required: true, :placeholder=>"Mr/Mrs/Miss") %>
+      </div>
 
-      <td class="col-md-3"><%= form.label :empid %></td>
-      <td class="col-md-3">
-        <%= form.number_field(:empid, id: :employee_empid,
+      <div class="form-group col-md-3">
+        <%= form.label :empid %>
+        <%= form.number_field(:empid, 
                               required: true) %>
-      </td>
-    </tr>
+      </div>
 
-    <tr>
-      <td class="col-md-3"><%= form.label :firstname %></td>
-      <td class="col-md-3">
-        <%= form.text_field :firstname, id: :employee_firstname,
+      <div class="col-md-2 form-group">
+        <%= form.label :designation %><br/>
+        <%= form.select :designation, options_for_select(designation), :prompt=>"Select"%>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-3 form-group">
+        <%= form.label :firstname %>
+        <%= form.text_field :firstname,required: true,
+                            :placeholder=>"First Name" %>
+      </div>
+
+      <div class="col-md-3 form-group">
+        <%= form.label :midname %>
+        <%= form.text_field :midname,
+                            :placeholder=>"Middle Name" %>
+      </div>
+
+      <div class="col-md-3 form-group">
+        <%= form.label :lastname %>
+        <%= form.text_field :lastname, :placeholder=>"Last Name" %>
+      </div>
+
+    </div>
+
+    <div class="row">
+      <div class="col-md-3 form-group">
+        <%= form.label :nationality %><br/>
+        <%= form.text_field :nationality, required: true,
+                            :placeholder=>"nationality"  %>
+      </div>
+
+      <div class="col-md-3 form-group">
+        <%= form.label :homenumber %>
+        <%= form.text_field :homenumber,required: true,
+                            :placeholder =>"Home number" %>
+      </div>
+
+      <div class="col-md-3 form-group">
+        <%= form.label :mobile %><br/>
+        <%= form.telephone_field :mobile, required: true,
+                                 :placeholder=>"Mobile number" %>
+
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-3 form-group">
+        <%= form.label :city %><br/>
+        <%= form.text_field :city, required: true,
+                            :placeholder=>"City"  %>
+      </div>
+
+      <div class="col-md-3 form-group">
+        <%= form.label :state %>
+        <%= form.text_field :state,required: true,
+                            :placeholder =>"state" %>
+      </div>
+
+      <div class="col-md-3 form-group">
+        <%= form.label :pin %><br/>
+        <%= form.telephone_field :pin, required: true,
+                                 :placeholder=>"Pin Code" %>
+      </div>
+      
+    </div>
+
+    <div class="row">
+      <div class="col-md-3 form-group">
+        <%= form.label :address %><br/>
+        <%= form.text_field :address, required: true,
+                                 :placeholder=>"Address" %>
+
+      </div>
+      <div class="col-md-3 form-group">
+       <%= form.label :gender %></br>
+       <%= form.select :gender, [["Male", 1], ["Female", 2]], :prompt=>"Gender" %>
+      </div>
+
+      <div class="col-md-3 form-group">
+        <%= form.label :marital %><br/>
+        <%= form.select :marital, options_for_select(['Married','Unmarried']), :prompt=>"Select"%>
+      </div>
+     
+    </div>
+
+    <div class="row">
+      <div class="col-md-3 form-group">
+        <%= form.label :email %>
+        <%= form.text_field :email, required: true,
+                            :placeholder=>"Email"  %>
+      </div>
+
+      <div class="col-md-3 form-group">
+        <%= form.label :salary %>
+        <%= form.text_field :salary, :placeholder=>"salary",
                             required: true %>
-      </td>
+      </div>
 
-      <td class="col-md-3"><%= form.label :midname %></td>
-      <td class="col-md-3">
-        <%= form.text_field :midname, id: :employee_midname %>
-      </td>
+      <div class="col-md-3 form-group">
+        <%= form.label :bloodtype %><br/>
+        <%= form.select :bloodtype, options_for_select(blood), :prompt=>"Blood Group"%>
+      </div>
+    </div>
 
-    </tr>
+    <div class="row">
 
-    <tr>
+       <div class="col-md-5 form-group">
+        <%= form.label :joined_at %><br/>
+        <%= form.date_select :joined_at %>
+      </div>
 
-      <td class="col-md-3"><%= form.label :lastname %></td>
-      <td class="col-md-3">
-        <%= form.text_field :lastname, id: :employee_lastname,
-                            required: true %>
-      </td>
-
-      <td class="col-md-3"><%= form.label :bloodtype %></td>
-      <td class="col-md-3">
-        <%= form.text_field :bloodtype, id: :employee_bloodtype %>
-      </td>
-
-    </tr>
-
-    <tr>
-
-      <td class="col-md-3"><%= form.label :nationality %></td>
-      <td class="col-md-3">
-        <%= form.text_field :nationality, id: :employee_nationality,
-                            required: true  %>
-      </td>
-      <td class="col-md-3"><%= form.label :address %></td>
-      <td class="col-md-3">
-        <%= form.text_field :address, id: :employee_address,
-                            required: true %>
-      </td>
-
-    </tr>
-
-    <tr>
-      <td class="col-md-3"><%= form.label :city %></td>
-      <td class="col-md-3">
-        <%= form.text_field :city, id: :employee_city,
-                            require: true %>
-      </td>
-      <td class="col-md-3"><%= form.label :state %></td>
-      <td class="col-md-3">
-        <%= form.text_field :state, id: :employee_state,
-                            required: true %>
-      </td>
-    </tr>
-
-    <tr>
-      <td class="col-md-3"><%= form.label :pin %></td>
-      <td class="col-md-3">
-        <%= form.number_field :pin, id: :employee_pin %>
-      </td>
-
-      <td class="col-md-3"><%= form.label :homenumber %></td>
-      <td class="col-md-3">
-        <%= form.telephone_field :homenumber, id: :employee_homenumber %>
-      </td>
-    </tr>
-
-    <tr>
-      <td class="col-md-3"><%= form.label :mobile %></td>
-      <td class="col-md-3">
-        <%= form.telephone_field :mobile, id: :employee_mobile,
-                            required: true %>
-      </td>
-      <td class="col-md-3"><%= form.label :email %></td>
-      <td class="col-md-3">
-        <%= form.email_field :email, id: :employee_email,
-                             required: true %>
-      </td>
-    </tr>
-
-    <tr>
-      <td class="col-md-3"><%= form.label :joined_at %></td>
-      <td class="col-md-3">
-        <%= form.date_select :joined_at, id: :employee_joined_at %>
-      </td>
-      <td class="col-md-3"><%= form.label :birth_date %></td>
-      <td class="col-md-3">
-        <%= form.date_select :birth_date, id: :employee_birth_date %>
-      </td>
-    </tr>
-
-    <tr>
-      <td class="col-md-3"><%= form.label :gender %></td>
-      <td class="col-md-3">
-        <%= form.text_field :gender, id: :employee_gender,
-                            required: true %>
-      </td>
-      <td class="col-md-3"><%= form.label :marital %></td>
-      <td class="col-md-3">
-        <%= form.text_field :marital, id: :employee_marital %>
-      </td>
-    </tr>
-  </table>
+      <div class="col-md-5 form-group">
+        <%= form.label :birth_date %><br/>
+        <%= form.date_select :birth_date %>
+      </div>
+    </div>
 
   <div class="actions text-center">
     <%= form.submit "Submit", :class=>"btn btn-primary"%>

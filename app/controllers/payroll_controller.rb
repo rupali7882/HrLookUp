@@ -5,7 +5,7 @@ class PayrollController < ApplicationController
   	
   def import
     Timesheet.import(params[:file])
-    # redirect_to '', notice: 'Timesheet was imported successfully.'
+    redirect_to '/', notice: 'Timesheet was imported successfully.'
   end
 
   def timesheet

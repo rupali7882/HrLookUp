@@ -1,0 +1,2 @@
+class Designation < ApplicationRecord
+end
