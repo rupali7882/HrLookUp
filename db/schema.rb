@@ -18,6 +18,13 @@ ActiveRecord::Schema.define(version: 20171010084204) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "designations", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string "title"
+    t.integer "salary"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "employees", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "title"
     t.integer "empid"
@@ -44,25 +51,13 @@ ActiveRecord::Schema.define(version: 20171010084204) do
     t.integer "profile_file_size"
     t.datetime "profile_updated_at"
     t.text "keywords"
-    t.string "salary"
-    t.string "designation"
+    t.bigint "designation_id"
+    t.index ["designation_id"], name: "index_employees_on_designation_id"
   end
 
   create_table "entitlements", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "name"
     t.string "total_leave"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "payrolls", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.integer "min_salary"
-    t.integer "max_salary"
-    t.integer "emp_salary"
-    t.integer "tax"
-    t.integer "deduction"
-    t.string "designation"
-    t.integer "employee_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -109,4 +104,5 @@ ActiveRecord::Schema.define(version: 20171010084204) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "employees", "designations"
 end

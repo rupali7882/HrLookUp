@@ -6,7 +6,7 @@ $('document').ready(function() {
   $("#pictureInput").change(function(){
       $(".upload_profile").submit()
   });
-   
+
   $("#keywords").blur(function(){
     word = $("#keywords").val()
     if(word.length > 0){
@@ -16,8 +16,8 @@ $('document').ready(function() {
 
   $('.entitle-content .tabcontent').hide().slice(0, 1).show();
   $( "#datepicker" ).datepicker();
- 
-  
+
+
 });
 
 function openCity(evt, cityName) {
@@ -39,4 +39,4 @@ function openCity(evt, cityName) {
     // Show the current tab, and add an "active" class to the button that opened the tab
     document.getElementById(cityName).style.display = "block";
     evt.currentTarget.className += " active";
-} 
+}
